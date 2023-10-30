@@ -1,0 +1,40 @@
+class Ticket {
+    UserDashboard() {
+        cy.get("#navbar").contains('Dashboard').click()
+        cy.wait(2000)
+        cy.url().should('include', '/backend');
+        return this;
+    }
+
+    EventsList() {
+        cy.get(".small-box-footer").click()
+        cy.get("h3").contains('Events List')
+        cy.wait(2000)
+        cy.url().should('include', '/events');
+        return this;
+    }
+
+    Go() {
+        cy.get("tbody tr:nth-of-type(1) td:nth-of-type(8) .btnz-xs:nth-of-type(1)").click()
+        return this;
+    }
+
+    TicketPage() {
+        cy.get(".col-md-12 > li:nth-of-type(5)").click()
+        cy.wait(2000);
+        cy.get(".btn.btn-blue.mr-0").click();
+        return this;
+    }
+    
+    CreateTicket() {
+        cy.wait(2000);
+        cy.get("#id_title").type("Ghatasthapan ticket")
+        cy.get("span[role='combobox'] > span[role='presentation']").click().wait(2000)
+        cy.get("ul#select2-id_ticket_type-results > li[role='option']").click().wait(2000)
+        cy.xpath('//*[@id="id_event_detail"]').click()
+        cy.get("#id_amount_rs").clear().type("5000")
+        // cy.get("[type='submit']").click({force:true});
+        return this;
+    }
+}
+export default Ticket;
