@@ -1,7 +1,6 @@
 /// <reference types="Cypress" />
 import 'cypress-file-upload'
 /// <reference types="cypress-xpath" />
-
 import 'cypress-real-events/support';
 
 Cypress.Commands.add("visitMainPage", () => {

@@ -36,4 +36,17 @@ describe("Test for Create Event", () => {
     ticket.CreateTicket();
   });
 
+  
+  it("should able to Active - InActive ticket", () => {
+    ticket.ActiveInactive();
+  });
+
+  it("should able to edit ticket", () => {
+    ticket.EditTicket();
+  });
+    
+  it("should able to delete ticket", () => {
+    ticket.DeleteTicket();
+  });
+
 });

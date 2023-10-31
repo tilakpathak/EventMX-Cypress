@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@4tw/cypress-drag-drop": "^2.2.5",
     "@faker-js/faker": "^8.1.0",
     "cypress": "^8.7.0",
     "cypress-file-upload": "^5.0.8",

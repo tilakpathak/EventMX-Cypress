@@ -3,3 +3,4 @@ Cypress.on("uncaught:exception", (err, runnable) => {
   });
   import "./commands";
   require('cypress-xpath')
+  require('@4tw/cypress-drag-drop');
