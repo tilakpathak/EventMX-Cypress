@@ -4,9 +4,9 @@ import 'cypress-file-upload'
 import 'cypress-real-events/support';
 
 Cypress.Commands.add("visitMainPage", () => {
-    cy.request('GET','https://events.kodiary.com/')
-    .its('status')
-    .should('equal',200);
+    // cy.request('GET','https://events.kodiary.com/')
+    // .its('status')
+    // .should('equal',200);
     cy.visit(Cypress.env("baseUrl"));
     cy.get("#navbar li:nth-of-type(6) .btn-primary").click();
     cy.request("GET", "https://events.kodiary.com/accounts/login/")

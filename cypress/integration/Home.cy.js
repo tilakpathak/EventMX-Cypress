@@ -1,4 +1,3 @@
-
 ///<reference types="Cypress"/>
 import Home from "../POM/Home_po";
 
